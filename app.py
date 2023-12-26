@@ -1,5 +1,3 @@
-from email import message
-from tkinter import Button
 import streamlit 
 import pickle 
 
@@ -16,8 +14,6 @@ submit = streamlit.button("Predict")
 if submit:
     prediction = model.predict([message])
 
-    #print(prediction)
-    #streamlit.write(prediction)
 
     if prediction[0] == 'positive':
         streamlit.success('This review is good')
